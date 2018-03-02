@@ -21,7 +21,8 @@
     "android": "weex run android",
     "pack:ios": "npm run clean:ios && weex build ios",
     "pack:android": "npm run clean:android && weex build android",
-    "pack:web": "npm run clean:web && npm run build:release"
+    "pack:web": "npm run clean:web && npm run build:release",
+    "prod": "npm run build:prod && node configs/router.js"
   },
   "keywords": [
     "weex"
@@ -38,6 +39,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.8",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",

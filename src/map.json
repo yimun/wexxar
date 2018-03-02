@@ -1,0 +1,9 @@
+[{
+    "filename": "views/HelloWorld",
+    "uri": "wexxar://wexxar.com/main"
+  },
+  {
+    "filename": "views/Profile",
+    "uri": "wexxar://wexxar.com/profile"
+  }
+]

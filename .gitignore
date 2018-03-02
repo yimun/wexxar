@@ -28,4 +28,4 @@ talion-dist/
 
 /.temp
 package-lock.json
-
+/dist

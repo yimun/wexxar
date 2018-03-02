@@ -1,5 +1,6 @@
 const commonConfig = require('./webpack.common.conf');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
+const helper = require('./helper');
 
 const os = require('os');
 /**
@@ -7,9 +8,12 @@ const os = require('os');
  */
 const UglifyJsparallelPlugin = require('webpack-uglify-parallel');
 
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 /**
  * Webpack configuration for weex.
  */
+
 const weexConfig = webpackMerge(commonConfig[1], {
   /*
    * Add additional plugins to the compiler.
@@ -17,6 +21,11 @@ const weexConfig = webpackMerge(commonConfig[1], {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
+    new CleanWebpackPlugin('dist-prod/**/*.js', {
+      root: process.cwd(),
+      verbose: true,
+      dry: false,
+    }),
     /*
      * Plugin: UglifyJsparallelPlugin
      * Description: Identical to standard uglify webpack plugin
@@ -38,8 +47,8 @@ const weexConfig = webpackMerge(commonConfig[1], {
   ],
   
   output: {
-    filename: '[name].[chunkhash].bundle.js',
-    chunkFilename: '[id].[chunkhash].chunk.js'
+    path: helper.rootNode('dist-prod'),
+    filename: '[name]-[chunkhash].bundle.js',
   },
 })
 

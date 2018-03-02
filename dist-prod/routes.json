@@ -1,0 +1,15 @@
+{
+  "deploy_time": "Fri, 02 Mar 2018 10:09:48 GMT",
+  "items": [
+    {
+      "deploy_time": "Fri, 02 Mar 2018 10:09:48 GMT",
+      "remote_file": "https://raw.githubusercontent.com/yimun/wexxar/master/dist-prod/views/HelloWorld-d8560a4457a0dc80c634.bundle.js",
+      "uri": "wexxar://wexxar.com/main"
+    },
+    {
+      "deploy_time": "Fri, 02 Mar 2018 09:40:26 GMT",
+      "remote_file": "https://raw.githubusercontent.com/yimun/wexxar/master/dist-prod/views/Profile-972dd16eb4b7476478e1.bundle.js",
+      "uri": "wexxar://wexxar.com/profile"
+    }
+  ]
+}
