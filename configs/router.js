@@ -9,7 +9,8 @@ const generateRoutes = (dir) => {
   const sourcesMap = new Map();
   const routesMap = new Map();
   let srcPath = helper.root('map.json');
-  let currentTime = new Date().toUTCString();  
+  let currentTime = new Date().toUTCString();
+  let hasChange = false;  
   if (fs.existsSync(srcPath)) {
     fs.readJsonSync(srcPath).forEach((node) => {
       sourcesMap.set(node.uri, node);
@@ -41,6 +42,7 @@ const generateRoutes = (dir) => {
         remote_file: cndPath,
         uri: k
       };
+      hasChange = true;
     }
     newRoutes.push(node);
   });
@@ -48,9 +50,11 @@ const generateRoutes = (dir) => {
     deploy_time: currentTime,
     items: newRoutes,
   };
-  fs.writeFileSync(routePath, JSON.stringify(data, null, 2), (err) => {
-    console.log(err);
-  });
+  if (hasChange) {
+    fs.writeFileSync(routePath, JSON.stringify(data, null, 2), (err) => {
+      console.log(err);
+    });
+  }
 };
 
 // TODO use plugins 
