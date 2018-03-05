@@ -1,14 +1,14 @@
 {
-  "deploy_time": "Mon, 05 Mar 2018 03:44:49 GMT",
+  "deploy_time": "Mon, 05 Mar 2018 05:53:38 GMT",
   "items": [
     {
-      "deploy_time": "Mon, 05 Mar 2018 03:44:49 GMT",
-      "remote_file": "https://raw.githubusercontent.com/yimun/wexxar/master/dist-prod/views/HelloWorld-8d4f6fbc5f36cabe06e2.bundle.js",
+      "deploy_time": "Mon, 05 Mar 2018 05:53:38 GMT",
+      "remote_file": "https://raw.githubusercontent.com/yimun/wexxar/master/dist-prod/views/HelloWorld-d4838a83a42cc80a004b.bundle.js",
       "uri": "wexxar://wexxar.com/main"
     },
     {
-      "deploy_time": "Mon, 05 Mar 2018 03:44:49 GMT",
-      "remote_file": "https://raw.githubusercontent.com/yimun/wexxar/master/dist-prod/views/Profile-334d680bcdc2a3aa9378.bundle.js",
+      "deploy_time": "Mon, 05 Mar 2018 05:53:38 GMT",
+      "remote_file": "https://raw.githubusercontent.com/yimun/wexxar/master/dist-prod/views/Profile-14546947fe232c2a6c28.bundle.js",
       "uri": "wexxar://wexxar.com/profile"
     }
   ]
