@@ -1,6 +1,7 @@
 const commonConfig = require('./webpack.common.conf');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const helper = require('./helper');
+const HashOutput = require('webpack-plugin-hash-output');
 
 const os = require('os');
 /**
@@ -43,7 +44,12 @@ const weexConfig = webpackMerge(commonConfig[1], {
       }
     }),
     // Need to run uglify first, then pipe other webpack plugins
-    ...commonConfig[1].plugins
+    ...commonConfig[1].plugins,
+
+    // use file md5 as chunkhash
+    new HashOutput({
+      validateOutputRegex: /.*\.js$/,
+    })
   ],
   
   output: {
