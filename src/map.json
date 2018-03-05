@@ -5,5 +5,9 @@
   {
     "filename": "views/Profile",
     "uri": "wexxar://wexxar.com/profile"
+  },
+  {
+    "filename": "views/Subject",
+    "uri": "wexxar://wexxar.com/subject"
   }
 ]
